@@ -1,8 +1,15 @@
 import axios from "axios";
 
+// const api = axios.create({
+//   // baseURL: "http://localhost:5000/api"
+//   baseURL: ""
+// });
 const api = axios.create({
-  // baseURL: "http://localhost:5000/api"
-  baseURL: "https://finance-tracker-3pmi.onrender.com/api"
+
+  baseURL:
+    import.meta.env.VITE_API_URL,
+
+  timeout: 30000,
 });
 
 // Attach token automatically
