@@ -19,13 +19,13 @@ with a beautiful modern UI and secure authentication system.
 ## Frontend
 
 ```txt
-https://your-vercel-url.vercel.app
+https://my-vercel-url.vercel.app  still on progress....
 ```
 
 ## Backend API
 
 ```txt
-https://your-render-url.onrender.com
+https://my-render-url.onrender.com  still on progress..
 ```
 
 ---
