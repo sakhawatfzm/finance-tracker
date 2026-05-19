@@ -171,14 +171,12 @@ npm run dev
 ---
 
 # 📸 Screenshots
+## Login Page
+<img width="1640" height="1354" alt="image" src="https://github.com/user-attachments/assets/7dc056ce-7934-4dd2-a154-7a5203906457" />
 
-## Dashboard
+## Register Page
+<img width="1154" height="1290" alt="image" src="https://github.com/user-attachments/assets/20b14ad8-0094-40a9-9672-b45c2a542ffc" />
 
-
-
-```md
-
-```
 
 ---
 
