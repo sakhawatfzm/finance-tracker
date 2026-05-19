@@ -14,11 +14,17 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://finance-tracker-gold-ten.vercel.app"
+      "https://finance-tracker-gold-ten.vercel.app",
     ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
+// Handle preflight requests
+app.options("*", cors());
+
+app.use(express.json());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
