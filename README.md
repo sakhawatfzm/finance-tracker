@@ -16,16 +16,10 @@ with a beautiful modern UI and secure authentication system.
 
 # 🚀 Live Demo
 
-## Frontend
+## Live Website
 
 ```txt
-https://my-vercel-url.vercel.app  still on progress....
-```
-
-## Backend API
-
-```txt
-https://my-render-url.onrender.com  still on progress..
+https://finance-tracker-gold-ten.vercel.app/
 ```
 
 ---
