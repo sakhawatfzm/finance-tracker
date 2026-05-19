@@ -1,27 +1,38 @@
-import {
-  Navigate,
-} from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-import { useAuth }
-from "../hooks/useAuth";
+import { useAuth } from "../hooks/useAuth";
 
-function ProtectedRoute({
-  children,
-}) {
+import "../styles/dashboard.css";
 
-  const {
-    user,
-    authLoading,
-  } = useAuth();
+function ProtectedRoute({ children }) {
+
+  const { user, authLoading } = useAuth();
 
   // Loading auth check
   if (authLoading) {
     return (
-      <div className="min-h-screen bg-[#030712] flex items-center justify-center text-white">
+      <div className="auth-check-shell">
 
-        <h1 className="text-3xl font-bold">
-          Checking Authentication...
-        </h1>
+        <div className="auth-check-blob auth-check-blob--1" />
+        <div className="auth-check-blob auth-check-blob--2" />
+
+        <div className="auth-check-body">
+
+          {/* Logomark */}
+          <div className="auth-check-logo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08090d" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2 12L6 7L9 10L13 4" />
+              <path d="M13 4h5v5" />
+            </svg>
+          </div>
+
+          {/* Spinner */}
+          <div className="auth-check-spinner" />
+
+          {/* Text */}
+          <p className="auth-check-text">Checking authentication…</p>
+
+        </div>
 
       </div>
     );
