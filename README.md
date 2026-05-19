@@ -177,7 +177,7 @@ npm run dev
 
 
 ```md
-<img width="2854" height="1450" alt="image" src="https://github.com/user-attachments/assets/97bb33a6-e0d0-4d19-95f1-87b696b8027d" />
+
 ```
 
 ---
