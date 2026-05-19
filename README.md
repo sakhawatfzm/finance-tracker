@@ -32,20 +32,20 @@ https://your-render-url.onrender.com
 
 # ✨ Features
 
-✅ User Authentication (JWT)
-✅ Secure Login & Registration
-✅ Protected Routes
-✅ Add Transactions
-✅ Delete Transactions
-✅ Income & Expense Tracking
-✅ Financial Summary Dashboard
-✅ Analytics Pie Chart
-✅ Search & Filter Transactions
-✅ Responsive Modern UI
-✅ Toast Notifications
-✅ Animated Components with Framer Motion
-✅ PostgreSQL Database with Prisma ORM
-✅ Full REST API Backend
+- ✅ User Authentication (JWT)
+- ✅ Secure Login & Registration
+- ✅ Protected Routes
+- ✅ Add Transactions
+- ✅ Delete Transactions
+- ✅ Income & Expense Tracking
+- ✅ Financial Summary Dashboard
+- ✅ Analytics Pie Chart
+- ✅ Search & Filter Transactions
+- ✅ Responsive Modern UI
+- ✅ Toast Notifications
+- ✅ Animated Components with Framer Motion
+- ✅ PostgreSQL Database with Prisma ORM
+- ✅ Full REST API Backend
 
 ---
 
