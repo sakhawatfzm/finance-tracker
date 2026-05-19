@@ -26,22 +26,59 @@ function Register() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      setLoading(true);
-      const response = await api.post("/auth/register", formData);
-      localStorage.setItem("token", response.data.token);
-      localStorage.setItem(JSON.stringify(response.data.user));
-      toast.success("Registration successful");
-      navigate("/dashboard");
-    } catch (error) {
-      console.error(error);
-      toast.error(error.response?.data?.message || "Registration failed");
-    } finally {
-      setLoading(false);
+const handleSubmit = async (e) => {
+
+  e.preventDefault();
+
+  try {
+
+    setLoading(true);
+
+    const response = await api.post(
+      "/auth/register",
+      formData
+    );
+
+    // Save token
+    localStorage.setItem(
+      "token",
+      response.data.token
+    );
+
+    // Save user
+    localStorage.setItem(
+      "user",
+      JSON.stringify(response.data.user)
+    );
+
+    toast.success(
+      "Registration successful"
+    );
+
+    navigate("/dashboard");
+
+  } catch (error) {
+
+    console.error(error);
+
+    if (error.response) {
+
+      toast.error(
+        error.response.data.message
+      );
+
+    } else {
+
+      toast.error(
+        "Server is waking up... Please try again."
+      );
     }
-  };
+
+  } finally {
+
+    setLoading(false);
+  }
+};
 
   return (
     <div className="auth-shell">
