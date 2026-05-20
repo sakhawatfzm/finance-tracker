@@ -24,7 +24,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // ✅ Same corsOptions — not bare cors()
-app.options("*", cors(corsOptions));
+app.options("/{*path}", cors(corsOptions)); 
 
 // ✅ Removed duplicate
 app.use(express.json());
