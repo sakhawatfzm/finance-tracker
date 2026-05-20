@@ -328,7 +328,30 @@ body {
 }
 .ft-search { padding-left: 44px; }
 
-/* ── Transaction list ───────────────────── */
+/* ── Transaction list & items ───────────── */
+.tx-panel-header {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.tx-panel-title {
+  display: flex; align-items: center; gap: 10px;
+}
+.tx-count {
+  font-family: var(--font-mono);
+  font-size: 10px; color: var(--text-3);
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 2px 9px;
+  letter-spacing: 0.5px;
+}
+.tx-empty {
+  text-align: center; padding: 48px 0;
+  color: var(--text-3); font-size: 13px;
+}
+.tx-empty-icon {
+  font-size: 28px; margin-bottom: 10px; opacity: 0.4;
+}
+
 .tx-list { display: flex; flex-direction: column; gap: 12px; }
 .tx-item {
   display: flex; align-items: center; gap: 16px;
@@ -352,14 +375,25 @@ body {
 .tx-ind--income  { background: var(--green-dim); color: var(--green); }
 .tx-ind--expense { background: var(--red-dim);   color: var(--red); }
 
+/* This pushes the right side (amount + button) to the edge */
+.tx-info { flex: 1; min-width: 0; }
+
 .tx-title { font-size: 15px; font-weight: 500; color: var(--text-1); margin-bottom: 4px; }
 .tx-cat { font-family: var(--font-mono); font-size: 11px; color: var(--text-3); text-transform: uppercase; }
+
+/* This groups the amount and button and adds proper spacing between them */
+.tx-right { 
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
+  flex-shrink: 0; 
+}
 
 .tx-amount {
   font-family: var(--font-mono); font-size: 15px; font-weight: 600; min-width: 90px; text-align: right;
 }
 .tx-amount--income  { color: var(--green); }
-.tx-amount--expense { color: var(--text-1); } /* Modernized: pure red text feels aggressive, keeping expenses white/neutral is cleaner, but keeping your original class structure */
+.tx-amount--expense { color: var(--text-1); } 
 
 .btn-delete {
   background: transparent; border: 1px solid var(--border-md); border-radius: var(--radius-xs);
