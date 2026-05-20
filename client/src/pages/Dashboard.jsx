@@ -126,7 +126,6 @@ function Dashboard() {
   // Initial load
   useEffect(() => {
     fetchTransactions();
-    // Get token
   }, []);
 
   // Filtered transactions
