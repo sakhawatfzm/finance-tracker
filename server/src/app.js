@@ -10,29 +10,29 @@ dotenv.config();
 
 const app = express();
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "https://finance-tracker-gold-ten.vercel.app",
-    ],
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+// ✅ Define once, reuse in both places
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "https://finance-tracker-gold-ten.vercel.app",
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT, DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
 
-// IMPORTANT
-app.options("*", cors());
+app.use(cors(corsOptions));
 
+// ✅ Same corsOptions — not bare cors()
+app.options("*", cors(corsOptions));
 
+// ✅ Removed duplicate
 app.use(express.json());
-app.use(express.json());
+
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/transactions", transactionRoutes);
 app.use("/api/dashboard", dashboardRoutes);
-
 
 app.get("/", (req, res) => {
   res.status(200).json({
